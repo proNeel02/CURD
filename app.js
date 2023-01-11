@@ -4,6 +4,8 @@ let input = document.getElementById("input");
 
 let list = document.getElementById("list");
 
+
+
 add.addEventListener("click", function (e) {
     // console.log("input = ",input.value);
 
@@ -18,6 +20,15 @@ add.addEventListener("click", function (e) {
         li.innerHTML = ` <h3 class="flex-grow-1">${data}</h3>
                    
     <button class="btn btn-warning mx-3">Edit</button>
-    <button class="btn btn-danger">Remove</button>`;
+    <button class="btn btn-danger" onclick="remover(this)">Remove</button>`;
     }
 });
+
+
+
+function remove(currentElement){
+
+    currentElement.parentElement.remove();
+
+}
+
